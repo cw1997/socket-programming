@@ -1,2 +1,7 @@
 # socket-programming
 As a Teaching Assistant, this is a sample project about socket programming for my teaching in a capstone course in NTUST(National Taiwan University of Science and Technology)
+
+## usage
+    cmake . && make
+    
+Then check the directory `./bin`

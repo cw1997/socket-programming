@@ -1,0 +1,12 @@
+//
+// Created by 86759 on 2021/10/2.
+//
+
+#ifndef SOCKET_PROGRAMMING_CONFIG_H
+#define SOCKET_PROGRAMMING_CONFIG_H
+
+#define SERVER_IP inet_addr("127.0.0.1")
+//#define SERVER_IP INADDR_ANY
+#define SERVER_PORT 10607
+
+#endif //SOCKET_PROGRAMMING_CONFIG_H

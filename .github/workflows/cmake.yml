@@ -44,7 +44,7 @@ jobs:
         title: latest-release
         prerelease: false
         files: |
-          bin/*
+          build/bin/*
 
 
 #       id: create_release

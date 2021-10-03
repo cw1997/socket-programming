@@ -9,4 +9,8 @@
 //#define SERVER_IP INADDR_ANY
 #define SERVER_PORT 10607
 
+#define CLIENT_IP inet_addr("127.0.0.1")
+//#define SERVER_IP INADDR_ANY
+#define CLIENT_PORT 10608
+
 #endif //SOCKET_PROGRAMMING_CONFIG_H

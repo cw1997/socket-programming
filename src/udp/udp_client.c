@@ -1,19 +1,21 @@
 #include <stdio.h>
-#include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <memory.h>
-
-#include "config.h"
+#include <stdlib.h>
 
 int main(int argc, char *argv[]) {
+    char *addr = (argv[1]);
+    int port = atoi(argv[2]);
+    printf("start TCP Client to connect TCP Server: %s:%d ...\n", addr, port);
+
     struct sockaddr_in remote_address;
     memset(&remote_address, 0, sizeof(remote_address));
     remote_address.sin_family = AF_INET;
-    remote_address.sin_addr.s_addr = SERVER_IP;
-    remote_address.sin_port = htons(SERVER_PORT);
+    remote_address.sin_addr.s_addr = inet_addr(addr);
+    remote_address.sin_port = htons(port);
     struct sockaddr *remote_socket_address = (struct sockaddr *) &remote_address;
     size_t socket_address_length = sizeof(struct sockaddr);
 

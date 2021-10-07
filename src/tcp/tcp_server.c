@@ -5,15 +5,18 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <memory.h>
-
-#include "config.h"
+#include <stdlib.h>
 
 int main(int argc, char *argv[]) {
+    char *addr = argv[1];
+    int port = atoi(argv[2]);
+    printf("start TCP Server at %s:%d ...\n", addr, port);
+
     struct sockaddr_in local_address;
     memset(&local_address, 0, sizeof(local_address));
     local_address.sin_family = AF_INET;
-    local_address.sin_addr.s_addr = SERVER_IP;
-    local_address.sin_port = htons(SERVER_PORT);
+    local_address.sin_addr.s_addr = inet_addr(addr);;
+    local_address.sin_port = htons(port);
     struct sockaddr *local_socket_address = (struct sockaddr *) &local_address;
     size_t socket_address_length = sizeof(struct sockaddr);
 

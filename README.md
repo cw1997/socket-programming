@@ -3,17 +3,26 @@
 
 As a Teaching Assistant, this is a sample project about socket programming for my teaching in a capstone course in NTUST(National Taiwan University of Science and Technology)
 
+## environment
+- cmake >= 3.0
+- ubuntu
+- gcc
+
 ## build
     chmod +x ./build.sh && ./build.sh
 
 Then check the directory `./build/bin`
 
 ## usage
-tcp_client_Linux_x86_64 <ip address> <port>
-tcp_server_Linux_x86_64 <ip address> <port>
-udp_client_Linux_x86_64 <ip address> <port>
-udp_server_Linux_x86_64 <ip address> <port>
+    tcp_client_Linux_x86_64 <ip address> <port>
+    
+    tcp_server_Linux_x86_64 <ip address> <port>
+    
+    udp_client_Linux_x86_64 <ip address> <port>
+    
+    udp_server_Linux_x86_64 <ip address> <port>
 
+### command
     chmod +x ./build/bin/*
     cd ./build/bin
     ./tcp_client_Linux_x86_64 127.0.0.1 10607

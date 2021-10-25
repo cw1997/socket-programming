@@ -9,7 +9,7 @@
 int main(int argc, char *argv[]) {
     char *addr = (argv[1]);
     int port = atoi(argv[2]);
-    printf("start TCP Client to connect TCP Server: %s:%d ...\n", addr, port);
+    printf("start UDP Client to connect UDP Server: %s:%d ...\n", addr, port);
 
     struct sockaddr_in remote_address;
     memset(&remote_address, 0, sizeof(remote_address));

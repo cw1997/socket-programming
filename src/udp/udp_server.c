@@ -37,6 +37,7 @@ int main(int argc, char *argv[]) {
 
     while (1) {
         char buf[BUFSIZ];
+        memset(buf, 0, BUFSIZ);
         struct sockaddr_in remote_address;
         struct sockaddr *remote_socket_address = (struct sockaddr *) &remote_address;
         size_t recv_length = recvfrom(socket_fd, buf, BUFSIZ, 0, remote_socket_address, &socket_address_in_size);

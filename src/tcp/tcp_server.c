@@ -57,6 +57,7 @@ int main(int argc, char *argv[]) {
 
         while (1) {
             char buf[BUFSIZ];
+            memset(buf, 0, BUFSIZ);
             int read_bytes_length = read(client_socket_fd, &buf, BUFSIZ);
             if (read_bytes_length < 0) {
                 perror("read data error");
